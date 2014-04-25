@@ -125,7 +125,11 @@ $mobilityModelWeights = array(
         11 => 1, // kitchen sink
         12 => 1, // stove and microwave
         13 => 1, // fridge
-        14 => 1 // entrance door
+        14 => 1, // entrance door
+        15 => 1,
+        16 => 1,
+        17 => 1,
+        18 => 1
     )
 );
 ?>
