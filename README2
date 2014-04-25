@@ -1,0 +1,158 @@
+Steps for running the Optimization on the floorplan.png file:
+	1) put desired floorplan.png file inside the optimization folder, 
+	2) $ php convertFloorplan.php
+	3) $ php produceActivityScript.php n form 	//... where "n" is the number of goals and "form" is the mobility model (uniform, ...)
+	4) $ php produceTrace.php activityScript.txt      //... where "activityScript.txt" is the name of the activity file produced in step 3
+	5) $ php produceHeatmap.php form      //... where form is the mobility model (uniform, ...)
+	valla 
+
+===============================================================================
+/media/09361860747/ILS_MAP/bmps: 
+
+	contains the bmp files
+
+===============================================================================
+/media/09361860747/ILS_MAP/ils_new_v2.png
+
+	is the new ILS map, without any simplification
+
+===============================================================================
+/media/09361860747/ILS_MAP/ils_previous_version.png
+
+	is the not so well prepared ILS map ( contains color schemes that might not work with the scripts)
+
+===============================================================================
+/media/09361860747/ILS_MAP/ils_simple_v1.png
+
+	equal to the base new verison	
+
+	result: PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 40 bytes) in /home/masoud/Desktop/ILS/Optimization_ILS_new/common.php on line 633
+
+===============================================================================
+/media/09361860747/ILS_MAP/ils_simple_v2.png
+
+	same walls, removed all except two obstacles	
+
+	result: PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 37 bytes) in /home/masoud/Desktop/ILS/Optimization_ILS_new/common.php on line 633
+
+===============================================================================
+/media/09361860747/ILS_MAP/ils_simple_v3.png
+
+	changed walls to a simpler polygon, removed obstacles except for two
+
+	result:	found a polygon with 4 vertices
+		found a polygon with 4 vertices
+		found a polygon with 4 vertices
+
+	Continuing result (produceActivityScript): 	Unserializing destinations data structure...
+							(System Stals!)
+
+===============================================================================
+/media/09361860747/ILS_MAP/ils_simple_v4.png
+
+	changed walls to a simpler polygon
+
+	result: found a polygon with 4 vertices
+		found a polygon with 103 vertices
+		found a polygon with 86 vertices
+		found a polygon with 68 vertices
+		found a polygon with 122 vertices
+		PHP Fatal error:  Allowed memory size of 1073741824 bytes exhausted (tried to allocate 20 bytes) in /home/masoud/Desktop/ILS/Optimization_ILS_new/common.php on line 633
+	
+===============================================================================
+/media/09361860747/ILS_MAP/ils_simple_v5.png
+
+	changed walls to a simpler polygon, removed obstacles except for four, changed doors to simple polygons
+
+	result: found a polygon with 4 vertices
+		found a polygon with 4 vertices
+		found a polygon with 4 vertices
+		found a polygon with 4 vertices
+		found a polygon with 8 vertices
+
+	Continuing result (produceActivityScript): 	Unserializing destinations data structure...
+							activity script is saved into activityScript.txt.
+
+	Continuing result (produceTrace): 	Unserializing various data structures...
+						Saving trace image into trace_activityScript.png and trace data into RawTrace_activityScript.txt.
+						You may now copy the file RawTrace_activityScript.txt into the Simulator/FinlaExps directory
+						and watch animation by running the following command:
+
+	Continuing result (produceHeatMap):		Unserializing various data structures...
+						initial number of runs:
+						Array
+						(
+						    [0] => 160
+						    [1] => 160
+						    [2] => 160
+						)
+						total sum: 480
+						current pair 0 - 1
+						current pair 0 - 2
+						finished 1 run in 3.0054261684418
+						*** runs left:
+						Array
+						(
+						    [0] => 80
+						    [1] => 120
+						    [2] => 120
+						)
+						current pair 1 - 0
+						current pair 1 - 2
+						finished 2 run in 3.7081160545349
+						*** runs left:
+						Array
+						(
+						    [0] => 40
+						    [1] => 40
+						    [2] => 80
+						)
+						current pair 2 - 0
+						current pair 2 - 1
+						finished 3 run in 3.2996809482574
+						*** runs left:
+						Array
+						(
+						    [0] => 0
+						    [1] => 0
+						    [2] => 0
+						)
+						PHP Notice:  Undefined variable: validDestinations in produceHeatmap.php on line 168
+						PHP Warning:  implode(): Invalid arguments passed in  produceHeatmap.php on line 168
+						valid destinations: 
+						finished destination 0
+						finished destination 1
+						finished destination 2
+						total time: 10.014042854309
+						Saving a file with a heatmap score score_uniform_0.3noise.txt.
+						Saving an image with all the paths paths_score_uniform_0.3noise.png.
+						Saving an image with the heatmap heatmap_score_uniform_0.3noise.png.
+						Saving a smoothed heatmap score into smooth_score_uniform_0.3noise.txt
+						Saving an image with the smoothed heatmap smooth_heatmap_score_uniform_0.3noise.png.
+		
+	Final result: perfecto!		
+
+===============================================================================
+/media/09361860747/ILS_MAP/ils_simple_v6.png
+
+	changed walls to a very very simpler polygon, removed obstacles except for four, changed doors to simple polygons
+
+	result: found a polygon with 4 vertices
+		found a polygon with 4 vertices
+		found a polygon with 4 vertices
+		found a polygon with 4 vertices
+		found a polygon with 8 vertices
+	
+	Continuing result (produceActivityScript): 	Unserializing destinations data structure...
+							activity script is saved into activityScript.txt.
+
+	Continuing result (produceTrace): 	Unserializing various data structures...
+						Saving trace image into trace_activityScript.png and trace data into RawTrace_activityScript.txt.
+						You may now copy the file RawTrace_activityScript.txt into the Simulator/FinlaExps directory
+						and watch animation by running the following command:
+
+	Continuing result (produceHeatMap): failed! logs for this part is saved in log.txt
+
+===============================================================================
+ils_simple_v7 - Copy - Copy (5) -> works
+
