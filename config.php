@@ -2,7 +2,7 @@
 /****** various configurable parameters ******/
 
 //all units are meters
-$condoWidth = 10.6; 
+$condoWidth = 11.07;
 $gridStep = 0.1;
 $bodyDiameter = 0.4;
 
@@ -10,9 +10,9 @@ $bodyDiameter = 0.4;
 // assuming that the left bottom corner of the floorplan is (0,0) meters
 $movableArea = array(
     'minX' => 0,
-    'minY' => 3.24,
-    'maxX' => 7.6,
-    'maxY' => 6.29
+    'minY' => 0,
+    'maxX' => 4.87,
+    'maxY' => 6.53
 );
 // sensor range is horizontal rectangular, in meters, defined as dimensions of a cross-section at specified height
 $sensorRangeAtHeight = array(
