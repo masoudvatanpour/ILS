@@ -12,7 +12,7 @@ $movableArea = array(
     'minX' => 0,
     'minY' => 5,
     'maxX' => 4.87,
-    'maxY' => 11.07
+    'maxY' => 10.02
 );
 // sensor range is horizontal rectangular, in meters, defined as dimensions of a cross-section at specified height
 $sensorRangeAtHeight = array(
