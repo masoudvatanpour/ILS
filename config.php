@@ -2,7 +2,7 @@
 /****** various configurable parameters ******/
 
 //all units are meters
-$condoWidth = 11.07;
+$condoWidth = 10.02; // hight is 651 px * 1.75 cm/px = 11.39 meters, width is 573 px * 1.75 cm/px = 10.02 meters
 $gridStep = 0.1;
 $bodyDiameter = 0.4;
 
