@@ -247,7 +247,7 @@ imagedestroy($heatmapImg);
 $heatScoreMap = array();
 foreach($score as $index=>$val)
 {
-    $pix = $grid[$index]['x']." ".$grid[$index]['y'];
+    $pix = $grid[$index]['x']." ".$grid[$index]['y']; 
     $heatScoreMap[$pix] = $val;
 }
 //echo "heat sum before smoothing: ".array_sum($heatScoreMap)."\n";
