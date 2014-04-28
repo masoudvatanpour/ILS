@@ -21,7 +21,7 @@ $sensorRangeAtHeight = array(
     'y' => 1.4,
     'maxZ' => 5
 );
-$ceilingHeight = 2.5;
+$ceilingHeight = 2.4;
 // in meters, the physical sensor width, should be considered if the sensor is placed right next to a wall
 $sensorWidth = 0.06;
 

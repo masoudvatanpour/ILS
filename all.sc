@@ -3,7 +3,7 @@ rm -f *.txt
 php convertFloorplan.php
 echo
 echo "=================================================================================="
-php produceActivityScript.php 100 uniform
+php produceActivityScript.php 10 uniform
 echo
 echo "=================================================================================="
 php produceTrace.php activityScript.txt
