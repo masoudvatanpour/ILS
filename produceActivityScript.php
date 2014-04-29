@@ -51,6 +51,7 @@ $destinationWeight = $mobilityModelWeights[$mobilityModel];
 
 $minimumWeight = 0;
 $numberDestinationGroups = count($destinationGroups);
+echo $numberDestinationGroups;
 for($i = 0; $i < $numberDestinationGroups; $i++)
 {
     if($destinationWeight[$i] < $minimumWeight || !$minimumWeight)
