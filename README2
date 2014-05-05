@@ -1,4 +1,5 @@
 Steps for running the Optimization on the floorplan.png file:
+       0) install php-gd for the scripts to work;
 	1) put desired floorplan.png file inside the optimization folder, DON'T FORGET TO REMOVE ALL .TXT FILES FROM THE FOLDER (using rm -f .txt)
 	2) $ php convertFloorplan.php
 	3) $ php produceActivityScript.php n form 	//... where "n" is the number of goals and "form" is the mobility model (uniform, ...)
