@@ -10,8 +10,8 @@ $bodyDiameter = 0.4;
 // assuming that the left bottom corner of the floorplan is (0,0) meters
 $movableArea = array(
     'minX' => 0,
-    'minY' => 5,
-    'maxX' => 4.87,
+    'minY' => 4.5, // was 5
+    'maxX' => 5.25, // was 4.87
     'maxY' => 10.02
 );
 // sensor range is horizontal rectangular, in meters, defined as dimensions of a cross-section at specified height
