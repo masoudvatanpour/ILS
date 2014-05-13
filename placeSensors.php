@@ -287,10 +287,32 @@ if($plcmntManual)
             exit;
     }
     outputPlacementInfo($placemArr, $folder."polygons-manual", "", 1, $folder."SensorsMan$numberOfSensors");
-    //outputPlacementInfo($placemArr, "", "", 0, "", $folder."SensorsManFau$numberOfSensors");
+    outputPlacementInfo($placemArr, "", "", 1, "", $folder."SensorsManFau$numberOfSensors");
+    
     $imageName = "polygons-manual-$numberOfSensors-sens.png";
     if($showImage)
         echo '<img src="'.$folder.$imageName.'" border="1px">';
+    
+    
+//    
+//    echo "total time for creating maps: ".(microtime(TRUE)-$s)."\n";
+//    if(!$sensorScoreMapFileExists)
+//        file_put_contents($sensorScoreMapFile, serialize($sensorScoreMap));
+//    if(!$densityPerSensorFileExists)
+//        file_put_contents($densityPerSensorFile, serialize($densityPerSensor));
+//    if(!$behindDoorMapFileExists)
+//        file_put_contents($behindDoorMapFile, serialize($behindDoorMap));
+//    
+//    $s = microtime(TRUE);
+//    $placemArr = array();
+//    //$initialDensityPerSensor = $densityPerSensor;
+//    recurPlacementUpdateHeatmap($placemArr, $numberOfSensors);
+//    //file_put_contents($placementFile, serialize($placemArr));
+//    echo "total time for finding a placement: ".(microtime(TRUE)-$s)."\n";
+//    outputPlacementInfo($placemArr, $folder."polygons$fileNameSuffixPic", "", 1,$folder."SensorsOpt$fileNameSuffix", "", $img);
+//    outputPlacementInfo($placemArr, "", "", 1, "", $folder."SensorsFau$fileNameSuffix");
+//    
+//    
 }
 
 if($plcmntRandom)
@@ -515,7 +537,7 @@ if($plcmntOptimal)
         echo "total time for finding a placement: ".(microtime(TRUE)-$s)."\n";
         outputPlacementInfo($placemArr, $folder."polygons$fileNameSuffixPic", "", 1, 
                 $folder."SensorsOpt$fileNameSuffix", "", $img);
-        //outputPlacementInfo($placemArr, "", "", 1, "", $folder."SensorsFau$fileNameSuffix");
+        outputPlacementInfo($placemArr, "", "", 1, "", $folder."SensorsFau$fileNameSuffix");
     }
 }
 
