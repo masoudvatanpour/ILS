@@ -681,7 +681,9 @@ function drawPoly($polygon, $image, $colorPoly, $xSensor=null, $ySensor=null, $c
         //$x = $xSensor - 5 > 0 ? $xSensor - 5 : $xSensor + 5;
         //$y = $ySensor - 20 > 0 ? $ySensor - 20 : $ySensor + 20;
         $xOffset = strlen($sensorID)*4;
-        imagestring($image, 10, $xSensor - $xOffset, $ySensor - 8, $sensorID, $colorPoly);
+//        imagestring($image, 10, $xSensor - $xOffset, $ySensor - 8, $sensorID, $colorPoly);
+        imagesetpixel ( $image , $xSensor , $ySensor , $colorPoly);
+
     }
 }
 

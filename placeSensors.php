@@ -286,8 +286,8 @@ if($plcmntManual)
             echo "There is no manual placement configuration for $numberOfSensors sensors\n";
             exit;
     }
-    outputPlacementInfo($placemArr, $folder."polygons-manual", "", 1, $folder."SensorsMan$numberOfSensors");
-    outputPlacementInfo($placemArr, "", "", 1, "", $folder."SensorsManFau$numberOfSensors");
+    outputPlacementInfo($placemArr, $folder."polygons-manual", "", 0, $folder."SensorsMan$numberOfSensors");
+    //outputPlacementInfo($placemArr, "", "", 1, "", $folder."SensorsManFau$numberOfSensors");
     
     $imageName = "polygons-manual-$numberOfSensors-sens.png";
     if($showImage)
